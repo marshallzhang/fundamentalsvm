@@ -1,0 +1,4 @@
+class BadCompanyData(Exception):
+    pass
+
+
