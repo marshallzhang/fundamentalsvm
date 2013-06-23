@@ -2,6 +2,7 @@ from company_snapshot import CompanySnapshot
 from custom_exceptions import BadCompanyData
 import numpy as np
 import os
+import random
 
 def loadData(directory):
     dataMat = []; labelMat = []

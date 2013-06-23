@@ -4,12 +4,14 @@ from custom_exceptions import BadCompanyData
 
 class CompanySnapshot():
     
-    def __init__(self,filename):
+    def __init__(self,directory,filename):
         self.name = None
         self.date = None
         self.signals = []
         self.earnings = None
         
+        self.directory = directory
+
         self.loadData(filename)
         self.setEarnings()
         self.dataCheck()
@@ -25,7 +27,7 @@ class CompanySnapshot():
         self.date = time.strptime(parse_filename.group(2),"%d-%b-%Y")
         
         # get signals and earnings
-        f = open('../data/company_data/' + filename,'r')
+        f = open(self.directory + '/' + filename,'r')
         for line in f.readlines():
             if line == '\n':
                 self.signals.append(None)
