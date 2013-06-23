@@ -1,4 +1,4 @@
-import company_data_loader as data
+import data_loader as data
 import platt
 import operator
 
