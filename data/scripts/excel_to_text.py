@@ -50,7 +50,7 @@ for file in os.listdir('../raw_excel'):
                 previous_year_col = date_cols[year_col_index + 1]
                 data_col = previous_year_col - 1
                 ratio_string = ''
-                for ratio in [152,153,154,155,156,157,158,159,160,161,162,163,164,167,168,169,170,171,172,173,176,177,178,179,180,181,184,185,186,187,188,189,190]:
+                for ratio in [152,153,154,155,156,157,158,159,160,161,162,163,164,172,173,176,178,179,180]:
                     ratio = ratio - 1
                     value = sheet.cell_value(ratio,data_col)
                     try:
@@ -59,7 +59,7 @@ for file in os.listdir('../raw_excel'):
                             ratio_string += str(value) + '\n'
                         except ZeroDivisionError:
                             ratio_string += '\n'
-                    except TypeError:
+                    except:
                         ratio_string += '\n'
                 print ratio_string
 
@@ -69,7 +69,7 @@ for file in os.listdir('../raw_excel'):
                 
                 # year over year indicators
                 delta_string = ''
-                for metric in [47,60,62,65,66,67,68,69,71,74,75,78,79,83,84,88,91,92,93,104,105,107,109,111,113,117,118,122,128,138,140]:
+                for metric in [60,62,65,66,68,69,71,74,75,78,79,83,84,88,91,92,93,104,105,107,109,111,113,117,118,122,128,138,140]:
                     metric = metric - 1
                     previous_year_metric = sheet.cell_value(metric,data_col)
                     p_previous_year_metric = sheet.cell_value(metric,p_previous_year_data_col)
@@ -80,7 +80,7 @@ for file in os.listdir('../raw_excel'):
                             delta_string += str(delta) + '\n'
                         except ZeroDivisionError:
                             delta_string += '\n'
-                    except TypeError:
+                    except:
                         delta_string += '\n'
                 print delta_string
 
@@ -103,7 +103,7 @@ for file in os.listdir('../raw_excel'):
                             d_delta_string += str(ddelta) + '\n' 
                         except ZeroDivisionError:
                             d_delta_string += '\n'
-                    except TypeError:
+                    except:
                         d_delta_string += '\n'
                 print d_delta_string
                 
@@ -119,7 +119,7 @@ for file in os.listdir('../raw_excel'):
                             earnings_increase = -1
                     except ZeroDivisionError:
                         earnings_increase = ''
-                except TypeError:
+                except:
                     earnings_increase = ''
 
                 # put it all together and write

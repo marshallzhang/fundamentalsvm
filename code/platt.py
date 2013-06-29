@@ -112,8 +112,7 @@ class Platt():
     def classify(self, dataPoint):
         point = np.array(dataPoint, dtype=float)
         point[np.isnan(point)] = 0
-#        if np.dot(point, self.weights) + self.oS.b > 0:
-#            return 1.0
-#        else:
-#            return -1.0
-        return np.dot(point, self.weights) + self.oS.b
+        if np.dot(point, self.weights) + self.oS.b > 0:
+            return 1.0
+        else:
+            return -1.0
