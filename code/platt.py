@@ -1,4 +1,3 @@
-import svm_support
 import numpy as np
 import random
 
@@ -78,10 +77,10 @@ class Platt():
         self.labels = np.transpose(self.labels)
     
     def innerLoop(self, i):
-        ithError = svm_support.calcKthError(self.oS, i)
+        ithError = calcKthError(self.oS, i)
         if ((self.oS.labels[i] * ithError < -self.oS.tol) and (self.oS.alphas[i] < self.oS.C)) or\
             ((self.oS.labels[i] * ithError > self.oS.tol) and (self.oS.alphas[i] > 0)):
-            j, jthError = svm_support.selectJ(i, self.oS, ithError)
+            j, jthError = selectJ(i, self.oS, ithError)
             oldIthAlpha = self.oS.alphas[i].copy()
             oldJthAlpha = self.oS.alphas[j].copy()
  
@@ -102,15 +101,15 @@ class Platt():
  
             self.oS.alphas[j] -= self.oS.labels[j] * (ithError - jthError) / eta
  
-            self.oS.alphas[j] = svm_support.clipAlpha(self.oS.alphas[j], H, L)
-            svm_support.updateKthError(self.oS, j)
+            self.oS.alphas[j] = clipAlpha(self.oS.alphas[j], H, L)
+            updateKthError(self.oS, j)
  
             if (abs(self.oS.alphas[j] -oldJthAlpha)) < 0.00001:
                 return 0
  
             self.oS.alphas[i] += self.oS.labels[j] * self.oS.labels[i] * (oldJthAlpha - self.oS.alphas[j])
  
-            svm_support.updateKthError(self.oS, i)
+            updateKthError(self.oS, i)
 
             b1 = self.oS.b - ithError - self.oS.labels[i] * (self.oS.alphas[i] - oldIthAlpha) *\
                  np.dot(self.oS.data[i,:], self.oS.data[i,:].T) - self.oS.labels[j] *\
@@ -132,7 +131,7 @@ class Platt():
             return 0
 
     def train(self, C, tolerance, maxIterations, kTup=('lin', 0)):
-        self.oS = svm_support.optStruct(self.data, self.labels, C, tolerance)
+        self.oS = optStruct(self.data, self.labels, C, tolerance)
 
         iterations = 0
 

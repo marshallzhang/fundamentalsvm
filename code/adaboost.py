@@ -2,16 +2,16 @@ import numpy as np
 import math
 from collections import Counter
 import os
-import data_loader
+from eigencompanies import EigenCompanies
 
 class adaBoost():
 
-	def __init__(self):
+	def __init__(self, num_features):
 
 		self.data 			 = np.matrix([])
 		self.labels 		 = np.matrix([])
 		self.classifierArray = np.matrix([])
-		self.NUM_FEATURES    = 42 
+		self.NUM_FEATURES    = num_features 
 		self.featuresMatrix  = np.zeros((1,self.NUM_FEATURES))
 
         def loadData(self,dataIn,classLabelsIn):
