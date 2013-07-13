@@ -1,0 +1,53 @@
+1 ROE using P/L before tax (%) 151
+2 ROCE using P/L before tax (%) 152
+3 ROA using P/L before tax (%) 153
+4 ROE using Net income (%) 154
+5 ROCE using Net income (%) 155
+6 ROA using Net income (%) 156
+7 Profit margin (%) 157
+8 Gross margin (%) 158
+9 EBITDA margin (%) 159
+10 EBIT margin (%) 160
+11 Cash flow / Operating revenue (%) 161
+12 Enterprise value / EBITDA (x) 162
+13 Market cap / Cash flow from operations (x) 163
+14 Export revenue / Operating revenue (%) 171
+15 R&D expenses / Operating revenue (%) 172
+16 Current ratio (x) 175
+17 Shareholders liquidity ratio (x) 177
+18 Solvency ratio (Asset based) (%) 178
+19 Solvency ratio (Liability based) (%) 179
+20 dFixed assets 59
+21 dTangible fixed assets 61
+22 dCurrent assets 64
+23 dStock 65
+24 dDebtors 66
+25 dOther current assets 67
+26 dCash & cash equivalent 68
+27 dTOTAL ASSETS 70
+28 dShareholders funds 73
+29 dCapital 74
+30 dNon-current liabilities 77
+31 dLong term debt 78
+32 dCurrent liabilities 82
+33 dLoans 83
+34 dTOTAL SHAREH. FUNDS & LIAB. 87
+35 dWorking capital 90
+36 dNet current assets 91
+37 dEnterprise value 92
+38 dOperating revenue (Turnover) 103
+39 dSales 104
+40 dCosts of goods sold 106
+41 dGross profit 108
+42 dOther operating expenses 110
+43 dOperating P/L [=EBIT] 112
+44 dFinancial P/L 116
+45 dP/L before tax 117
+46 dP/L after tax 121
+47 dP/L for period [=Net income] 127
+48 dCash flow 137
+49 dEBITDA 139
+50 dGross profit minus dSales
+51 dSales minus dOther OpEx
+52 dSales minus dCurrent Assets
+53 Income increased or decreased
