@@ -4,7 +4,7 @@ import operator
 import adaboost
 
 START = 0
-END = 500
+END = 400
 EIGENVALUES = 10
 
 companies = data.EigenCompanies(EIGENVALUES, 
@@ -62,24 +62,33 @@ def testadaboost(iterations):
         else:
             total += 1
     print "Correct: ", str(float(correct) / float(total)) + "%"
+    correct = 0
+    total = 0
+    for i in range(len(labelMatrix)):
+        if adabooster.classify(dataMatrix[i]) == labelMatrix[i]:
+            correct += 1
+            total += 1
+        else:
+            total += 1
+    print "Correct: ", str(float(correct) / float(total)) + "%"
 
 
-#testadaboost(EIGENVALUES)
-bestC = 0
-bestT = 0
-bestCorrect = 0
-for C in range(0, 50, 5):
-    for toler in range(1, 100, 10):
-        print "C",float(C)/ 10.0
-        print "toler",float(toler)/100
-        curCorrect = test(float(C) / 10.0, float(toler) / 100, 40) 
-        
-        if curCorrect > bestCorrect:
-            bestC = C
-            bestT = toler
-            bestCorrect = curCorrect
-
-        print "best C", bestC
-        print "best T", bestT
-        print "best correct", bestCorrect
-         
+testadaboost(EIGENVALUES)
+#bestC = 0
+#bestT = 0
+#bestCorrect = 0
+#for C in range(0, 50, 5):
+#    for toler in range(1, 100, 10):
+#        print "C",float(C)/ 10.0
+#        print "toler",float(toler)/100
+#        curCorrect = test(float(C) / 10.0, float(toler) / 100, 40) 
+#        
+#        if curCorrect > bestCorrect:
+#            bestC = C
+#            bestT = toler
+#            bestCorrect = curCorrect
+#
+#        print "best C", bestC
+#        print "best T", bestT
+#        print "best correct", bestCorrect
+#         

@@ -156,7 +156,6 @@ class Platt():
             elif alphaPairsChanged == 0:
                 entireSet = True
 
-            print "Iteration: " + str(iterations)
 
         self.calcWeights()
 
