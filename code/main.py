@@ -4,12 +4,12 @@ import operator
 import adaboost
 
 START = 0
-END = 1500
+END = 200
 
-companies = data.companyDataLoader('../data/company_data', False, START, END)
+companies = data.companyDataLoader('../data/final_company_data', False, START, END)
 dataMatrix, labelMatrix = companies.getMatrices()
 
-testcompanies = data.companyDataLoader('../data/company_data', False, END + 1, END + (END - START) + 1)
+testcompanies = data.companyDataLoader('../data/final_company_data', False, END + 1, END + (END - START) + 1)
 testData, testLabels = testcompanies.getMatrices()
 
 def test(C,toler,maxIter):
@@ -53,22 +53,22 @@ def testadaboost(iterations):
     print "Correct: ", str(float(correct) / float(total)) + "%"
 
 
-#testadaboost(25)
-bestC = 0
-bestT = 0
-bestCorrect = 0
-for C in range(0, 50, 5):
-    for toler in range(1, 100, 10):
-        print "C",float(C)/ 10.0
-        print "toler",float(toler)/100
-        curCorrect = test(float(C) / 10.0, float(toler) / 100, 40) 
-        
-        if curCorrect > bestCorrect:
-            bestC = C
-            bestT = toler
-            bestCorrect = curCorrect
-
-        print "best C", bestC
-        print "best T", bestT
-        print "best correct", bestCorrect
-         
+testadaboost(25)
+#bestC = 0
+#bestT = 0
+#bestCorrect = 0
+#for C in range(0, 50, 5):
+#    for toler in range(1, 100, 10):
+#        print "C",float(C)/ 10.0
+#        print "toler",float(toler)/100
+#        curCorrect = test(float(C) / 10.0, float(toler) / 100, 40) 
+#        
+#        if curCorrect > bestCorrect:
+#            bestC = C
+#            bestT = toler
+#            bestCorrect = curCorrect
+#
+#        print "best C", bestC
+#        print "best T", bestT
+#        print "best correct", bestCorrect
+#         

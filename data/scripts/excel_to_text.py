@@ -69,7 +69,7 @@ for file in os.listdir('../raw_excel'):
                 
                 # year over year indicators
                 delta_string = ''
-                for metric in [60,62,65,66,68,69,71,74,75,78,79,83,84,88,91,92,93,104,105,107,109,111,113,117,118,122,128,138,140]:
+                for metric in [60,62,65,66,67,68,69,71,74,75,78,79,83,84,88,91,92,93,104,105,107,109,111,113,117,118,122,128,138,140]:
                     metric = metric - 1
                     previous_year_metric = sheet.cell_value(metric,data_col)
                     p_previous_year_metric = sheet.cell_value(metric,p_previous_year_data_col)

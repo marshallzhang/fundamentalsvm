@@ -11,58 +11,43 @@
 11 Cash flow / Operating revenue (%) 161
 12 Enterprise value / EBITDA (x) 162
 13 Market cap / Cash flow from operations (x) 163
-14 Net assets turnover (x) 166
-15 Interest cover (x) 167
-16 Stock turnover (x) 168
-17 Collection period (days) 169
-18 Credit period (days) 170
-19 Export revenue / Operating revenue (%) 171
-20 R&D expenses / Operating revenue (%) 172
-21 Current ratio (x) 175
-22 Liquidity ratio (x) 176
-23 Shareholders liquidity ratio (x) 177
-24 Solvency ratio (Asset based) (%) 178
-25 Solvency ratio (Liability based) (%) 179
-26 Gearing (%) 180
-27 Profit per employee  (th USD) 183
-28 Operating revenue per employee  (th USD) 184
-29 Costs of employees / Operating revenue (%) 185
-30 Average cost of employee  (th USD) 186
-31 Shareholders funds per employee  (th USD) 187
-32 Working capital per employee  (th USD) 188
-33 Total assets per employee  (th USD) 189
-34 dNumber of employees 46
-35 dFixed assets 59
-36 dTangible fixed assets 61
-37 dCurrent assets 64
-38 dStock 65
-39 dDebtors 66
-40 dOther current assets 67
-41 dCash & cash equivalent 68
-42 dTOTAL ASSETS 70
-43 dShareholders funds 73
-44 dCapital 74
-45 dNon-current liabilities 77
-46 dLong term debt 78
-47 dCurrent liabilities 82
-48 dLoans 83
-49 dTOTAL SHAREH. FUNDS & LIAB. 87
-50 dWorking capital 90
-51 dNet current assets 91
-52 dEnterprise value 92
-53 dOperating revenue (Turnover) 103
-54 dSales 104
-55 dCosts of goods sold 106
-56 dGross profit 108
-57 dOther operating expenses 110
-58 dOperating P/L [=EBIT] 112
-59 dFinancial P/L 116
-60 dP/L before tax 117
-61 dP/L after tax 121
-62 dP/L for period [=Net income] 127
-63 dCash flow 137
-64 dEBITDA 139
-65 dGross profit minus dSales
-66 dSales minus dOther OpEx
-67 dSales minus dCurrent Assets
-68 Income increased or decreased
+14 Export revenue / Operating revenue (%) 171
+15 R&D expenses / Operating revenue (%) 172
+16 Current ratio (x) 175
+17 Shareholders liquidity ratio (x) 177
+18 Solvency ratio (Asset based) (%) 178
+19 Solvency ratio (Liability based) (%) 179
+20 dFixed assets 59
+21 dTangible fixed assets 61
+22 dCurrent assets 64
+23 dStock 65
+24 dDebtors 66
+25 dOther current assets 67
+26 dCash & cash equivalent 68
+27 dTOTAL ASSETS 70
+28 dShareholders funds 73
+29 dCapital 74
+30 dNon-current liabilities 77
+31 dLong term debt 78
+32 dCurrent liabilities 82
+33 dLoans 83
+34 dTOTAL SHAREH. FUNDS & LIAB. 87
+35 dWorking capital 90
+36 dNet current assets 91
+37 dEnterprise value 92
+38 dOperating revenue (Turnover) 103
+39 dSales 104
+40 dCosts of goods sold 106
+41 dGross profit 108
+42 dOther operating expenses 110
+43 dOperating P/L [=EBIT] 112
+44 dFinancial P/L 116
+45 dP/L before tax 117
+46 dP/L after tax 121
+47 dP/L for period [=Net income] 127
+48 dCash flow 137
+49 dEBITDA 139
+50 dGross profit minus dSales
+51 dSales minus dOther OpEx
+52 dSales minus dCurrent Assets
+53 Income increased or decreased
